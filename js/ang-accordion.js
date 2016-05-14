@@ -96,7 +96,7 @@
             return type == 'url' ? scope.icon : null;
           };
         },
-        template: '<div class="collapsible-item" ng-class="{open: isOpenned}"><div class="title" ng-class="{disabled: itemDisabled}" ng-click="toggleCollapsibleItem()">{{itemTitle}}<i ng-show="iconsType == \'class\'" class="{{icon}} icon" ng-class="{iconleft: iconIsOnLeft}"></i><img ng-show="iconsType == \'url\'" class="icon" ng-class="{iconleft: iconIsOnLeft}" ng-src="{{getIconUrl(iconsType)}}" /></div><div class="body"><div class="content" ng-transclude></div></div></div>'
+        template: '<div class="collapsible-item" ng-class="{open: isOpenned}"><div class="title" ng-class="{disabled: itemDisabled}" ng-click="toggleCollapsibleItem()">{{itemTitle}}<i ng-show="iconsType == \'class\'" class="{{icon}} icon" ng-class="{iconleft: iconIsOnLeft}"></i><img ng-show="iconsType == \'url\'" class="icon" ng-class="{iconleft: iconIsOnLeft}" ng-src="{{getIconUrl(iconsType)}}" /></div><div class="body"><div class="content" ng-if="isOpenned" ng-transclude></div></div></div>'
       };
     });
 })();
